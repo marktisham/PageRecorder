@@ -1,0 +1,82 @@
+﻿
+@glyph_padding: 7px;
+
+.controlbar {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    .fa {
+        padding-right: @glyph_padding;
+    }
+
+    #root_commands {
+        float: right;
+    }
+
+    .playback {
+        select {
+            float: left;
+            border-radius: 0;
+            width: 150px;
+        }
+    }
+}
+
+.btn-group {
+    margin-right: 15px;
+}
+
+#timer_status {
+    font-style: italic;
+    color: #aaa;
+}
+
+.viewport {
+    border-radius: 3px;
+    min-height: 300px;
+    margin-top: 10px;
+
+    .panel {
+        margin-bottom: 0 !important;
+    }
+
+    .panel-body {
+        padding: 0 !important;
+
+        .nesting {
+            margin-top: 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    .fa {
+        padding-right: @glyph_padding;
+    }
+}
+
+.testpanel {
+    .panel-heading {
+        .panelnumber {
+            float: right;
+            margin-top: 8px;
+        }
+    }
+
+    .panel-body {
+        padding: 15px !important;
+    }
+
+    .form-control {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .controlbar {
+        #root_commands {
+            float: none;
+        }
+    }
+}

@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "DOM Recorder Prototype";
+}
+
+<h3>Mark's Extremely Crude DOM Recorder</h3>
+
+<p><i>Hit record, change some stuff, stop, replay, repeat...</i></p>
+
+<div class="controlbar">
+    <div class="btn-group" role="group">
+        <a href="/" class="btn btn-default"><i class="fa fa-home"></i>Reset</a>
+    </div>
+    <div class="btn-group playback" role="group">
+        <button class="btn btn-default" id="replaybutton" onclick="PageRecorder.Controller.Play();">
+            <i class="fa fa-play" aria-hidden="true"></i>
+            Play
+        </button>
+        <select class="form-control" id="playback-speed">
+            <option value="0.25">0.25 x</option>
+            <option value="0.5">0.5 x</option>
+            <option value="1" selected>Normal Speed</option>
+            <option value="1.5">1.5 x</option>
+            <option value="2">2 x</option>
+            <option value="4">4 x</option>
+        </select>
+        <button class="btn btn-default" id="stopbutton" onclick="PageRecorder.Controller.Stop();">
+            <i class="fa fa-stop" aria-hidden="true"></i>
+            Stop
+        </button>
+    </div>
+    <div class="btn-group" role="group">
+        <button class="btn btn-danger" id="recordbutton" onclick="PageRecorder.Controller.Record();">
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            Record
+        </button>
+    </div>
+    <div class="btn-group" id="root_commands" role="group">
+        <button class="btn btn-default" onclick="PageRecorder.Controller.AddRootPanel();"><i class="fa fa-plus"></i>Add Root Panel</button>
+        <button class="btn btn-default" onclick="PageRecorder.Controller.RemoveAllFromDOM();"><i class="fa fa-trash"></i>Remove All Panels</button>
+    </div>
+</div>
+<div id="timer_status">Hit record to start.</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-success viewport">
+            <div class="panel-heading">
+                <span>Capture Area</span>
+            </div>
+            <div class="panel-body">
+                <div id="dom_watch_area">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <!-- This would have to go in <head> for a full screen capture... -->
+    @Scripts.Render("~/bundles/appjs")
+}
