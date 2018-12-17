@@ -37,6 +37,7 @@ This is very much a "happy path" prototype to learn the core concepts, demonstra
 - Local performance and memory footprint could be a lot better.
 - Not secured server side 
 - Sessions are ephemeral and locally stored
+- CSS and Javascript intentionally not combined, minified and cache-busting versioned so you can easily view source from the demo. It's a 1-liner to turn that on for the project.
 
 ## About the Design
 
