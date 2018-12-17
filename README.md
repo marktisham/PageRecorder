@@ -13,7 +13,7 @@ Or [watch the video](http://recordit.co/zuQAJ7DqwT)!
 
 
 
-![1545005938296](C:\Users\mtish\Documents\GitHub\PageRecorder\1545005938296.png)
+![Screenshot](1545005938296.png)
 
 ### Future Directions
 
